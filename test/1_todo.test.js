@@ -21,7 +21,7 @@ describe('CRUD TODO', function () {
                     expect(res.body).toHaveProperty("description", todo.description)
                     done()
                 })
-                .catch(console.log)
+                .catch(done)
         })
 
         it('should send arrays with status code 200', function (done) {
@@ -35,7 +35,7 @@ describe('CRUD TODO', function () {
                     expect(res.body[0]).toHaveProperty("description", todo.description)
                     done()
                 })
-                .catch(console.log)
+                .catch(done)
         })
 
     })
